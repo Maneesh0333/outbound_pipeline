@@ -63,17 +63,8 @@ def run_pipeline(domain):
     # ── Step 4: Send ──────────────────────────────────────────────────────────
     print("\n[5] Sending emails to myself...")
 
-    # results = brevo.send_bulk(verified)
-    results = brevo.send_bulk([{
-    "email":        "maneesh@maneesh.space",
-    "first_name":   "Maneesh",
-    "full_name":    "U",
-    "title":        "CEO",
-    "company_name": "Test Co",
-    "domain":       "testco.com",
-}])
-
-
+    results = brevo.send_bulk(verified)
+    
     sent     = [r for r in results if r["ok"]]
     failed   = [r for r in results if not r["ok"]]
 

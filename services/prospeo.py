@@ -119,7 +119,7 @@ class ProspeoClient:
         """
         Sequentially enrich all people with a small delay to respect rate limits.
         """
-        people = people[:5] 
+        # people = people[:5] 
 
         enriched = []
         total = len(people)
